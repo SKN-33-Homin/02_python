@@ -45,3 +45,11 @@ print(keyword.kwlist)
 변수 앞에 선언시 private 변수 선언 가능(*을 이용한 모든 라이브러리 호출 시 무시 가능)
 """
 # 4. 자릿수 구분용으로 사용하세요.
+
+## 자료형
+
+a = 10
+b = "10"
+
+print(type(a))
+print(type(b))
