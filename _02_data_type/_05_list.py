@@ -139,5 +139,77 @@ for idx, i in enumerate(lst):
     print(f'lst[{idx}]: {i}')
 
 
+# list api
+
+print('--- list.count(값) ---') # list 내부에 같은 값이 몇 개 존재하는가
+fruits = ['apple', 'banana', 'cherry', 'melon', 'kiwi']
+
+print('fruits.count(apple):', fruits.count('apple'))
+print('fruits.count(banana):', fruits.count('banana'))
+print('fruits.count(kiwi):', fruits.count('kiwi'))
+
+# sort : 정렬
+# list.sort() : 원본 리스트 내에서(in-place) 정렬
+# 원본 데이터 손실
+
+# sorted(list) : 원본을 복사하여 새 리스트에(not-in-place) 정렬
+# 원본 데이터 유지
+
+print('--- list.sort ---')
+
+nums = [100, 30, 50, 20, 70]
+print(nums)
+nums.sort()
+print('오름차순 정렬된 nums:', nums)
+nums.sort(reverse=True)
+print('내림차순 정렬된 nums:', nums)
+
+# key 속성 -> 정렬 기준 부여 가능
+print('--- key 속성 -> 정렬 기준 함수 ---')
+print('fruits :" fruits')
+
+#len 기준 정렬
+fruits_1 = sorted(fruits, key=lambda x: len(x))
+print('fruits:', fruits_1)
+
+fruits_2 = sorted(fruits, key=lambda x: len(x), reverse=True)
+print('fruits:', fruits_2)
+
+fruits.sort(key=len)
+print('fruits:', fruits)
+
+
+# 커스텀 정렬기준함수
+def my_sort(elem):
+    return len(elem), elem # tuple로 우선순위 지정
+
+fruits.sort(key=my_sort)
+print(fruits)
+
+# list unpacking
+# list == 변수의 묶음(packing)
+print('--- list unpacking ---')
+numbers = [10, 20, 30,]
+
+# a = numbers[0]
+# b = numbers[1]
+# c = numbers[2]
+
+a, b, c = numbers
+print(a, b, c)
+
+d, *e = numbers
+print(d, e)
+
+numbers = [10, 20, 30, 40, 50]
+
+a, *b, c = numbers
+print(a, b, c)
+
+
+
+
+
+
 
 
