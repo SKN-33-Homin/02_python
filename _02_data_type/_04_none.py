@@ -1,14 +1,10 @@
-# None type
-
+# NoneType
+# - 값이 없음을 뜻하는 자료형
 a = None
-print(a)
-print(type(a))
+print(a, type(a))
 
-s = 'hello world'
-print(s)
-print(type(s))
-
-s = None # 변수 값 제거
-print(s)
-print(type(s))
-
+# 변수 값 제거
+s = 'hello'
+print(s, type(s))
+s = None
+print(s, type(s))
